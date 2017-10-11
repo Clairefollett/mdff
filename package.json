@@ -3,11 +3,12 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "homepage": "http://manydances.org",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "start": "react-scripts start",
-    "build": "webpack -p",
+    "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "dev": "webpack -d --watch"
@@ -21,17 +22,20 @@
   "bugs": {
     "url": "https://github.com/Clairefollett/mdff/issues"
   },
-  "homepage": "https://github.com/Clairefollett/mdff#readme",
   "devDependencies": {
     "gh-pages": "^1.0.0",
     "react-scripts": "^1.0.14"
   },
   "dependencies": {
     "babel-loader": "^7.1.2",
+    "babel-polyfill": "^6.26.0",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
+    "eslint-plugin-babel": "^4.1.2",
+    "path": "^0.12.7",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
+    "react-router": "^4.2.0",
     "react-router-dom": "^4.2.2",
     "webpack": "^3.6.0"
   }

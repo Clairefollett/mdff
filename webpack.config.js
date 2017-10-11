@@ -1,18 +1,34 @@
-import webpack from 'webpack'
+var webpack = require('webpack')
+var path = require('path')
 
 var config = {
-  entry: __dirname + 'src/index.js',
+  entry: [
+  './src/index.js',
+  ],
   output: {
-    path: __dirname,
-    filename: '/public/bundle.js'
+    path: path.join(__dirname, '/public/bundle.js'),
+    filename: 'bundle.js',
+  },
+  resolve: {
+    extensions: ['.js', '.jsx']
   },
   module : {
-    loaders : [
+    rules: [
       {
-        test : '/\.jsx?/',
-        include : __dirname + 'src/index.js',
-        loader : 'babel'
-      }
+        enforce: "pre",
+        test: /\.jsx?$/,
+        exclude: /node_modules/,
+        loader: "eslint-loader"
+      },
+        {
+          test: /.jsx?$/,
+          loader: 'babel-loader',
+          exclude: /node_modules/,
+          query: {
+            presets: ['es2015', 'react']
+          }
+        }
+
     ]
   }
 }

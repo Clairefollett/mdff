@@ -8,12 +8,12 @@ export default class Header extends React.Component {
         <header>
             <nav className='navigation'>
                 <ul className='linked-lists'>
-                    <li className='button'><Link to='/' className='link'><img src={require('../assets/home.jpg')} alt='home-icon' className='icon'/></Link></li>
-                    <li className='button'><Link to='/About' className='link'><img src={require('../assets/about.jpg')} alt='about-icon' className='icon'/></Link></li>
-                    <li className='button'><Link to='/News' className='link'><img src={require('../assets/news.jpg')} alt='news-icon' className='icon'/></Link></li>
+                    <li className='button'><Link to='/' className='link'>Home</Link></li>
+                    <li className='button'><Link to='/About' className='link'>About</Link></li>
+                    <li className='button'><Link to='/News' className='link'>News</Link></li>
                     {/*<li className='button'><Link to='/Donate' className='link'>Donate</Link></li>*/}
-                    <li className='button'><Link to='/ContactUs' className='link'><img src={require('../assets/contactUs.jpg')} alt='contact-icon' className='icon'/></Link></li>
-                    <li className='button'><Link to='/SocialMedia' className='link'><img src={require('../assets/socialMedia.jpg')} alt='social-icon' className='icon'/></Link></li>
+                    <li className='button'><Link to='/ContactUs' className='link'>Contact Us</Link></li>
+                    <li className='button'><Link to='/SocialMedia' className='link'>Social Media</Link></li>
                 </ul>
             </nav>
         </header>
