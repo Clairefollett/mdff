@@ -4,7 +4,7 @@ var config = {
   entry: __dirname + '/index.js',
   output: {
     path: __dirname,
-    filename: 'bundle.js'
+    filename: '/public/bundle.js'
   }
 };
 
